@@ -1,6 +1,7 @@
 package com.timoxino.ppoker.resources.service;
 
 import com.timoxino.ppoker.resources.model.Message;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeService
 {
     @RequestMapping("/")
+    @CrossOrigin(origins = "*", maxAge = 3600)
     public Message home()
     {
         return new Message("Hello!");
